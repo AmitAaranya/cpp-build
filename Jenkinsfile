@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Github Pull') {
       steps {
-        git(url: 'https://github.com/AmitAaranya/CPP', branch: '/master')
+        git(url: 'https://github.com/AmitAaranya/CPP', branch: '/main')
       }
     }
 
