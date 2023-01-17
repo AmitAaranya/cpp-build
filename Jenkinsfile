@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Github Pull') {
+    stage('github') {
       steps {
-        git(url: 'https://github.com/AmitAaranya/CPP', branch: '/main')
+        git(url: 'https://github.com/AmitAaranya/CPP.git', branch: 'main')
       }
     }
 
