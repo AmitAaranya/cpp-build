@@ -8,13 +8,13 @@ pipeline {
     }
     stage("MSBuild") {
         steps{
-            bat 'docker run -v C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\cpp-pipeline-w\\:C:\\app buildtool1 msbuild c:\\app\\Demowix\\Demowix.vcxproj'
+            bat 'docker run -v C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\cpp-build-pipeline\\:C:\\app buildtool1 msbuild c:\\app\\Demowix\\Demowix.vcxproj'
         }
         
     }
     stage("WixBuild") {
         steps{
-            bat "docker run -v C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\cpp-pipeline-w\\:C:\\app demowixc wix build -o C:\\app\\wixMSI\\bin\\Release\\Demowix${BUILD_NUMBER}.msi C:\\app\\wixMSI\\Product.wxs"
+            bat "docker run -v C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\cpp-build-pipeline\\:C:\\app demowixc wix build -o C:\\app\\wixMSI\\bin\\Release\\Demowix${BUILD_NUMBER}.msi C:\\app\\wixMSI\\Product.wxs"
         }
         
     }
