@@ -41,7 +41,7 @@ pipeline {
             // bat "git add ."
             // bat 'git commit -m "New MSI build push"'
             // bat 'git remote add new1  https://github.com/AmitAaranya/CPP'
-            // bat "git push -u origin main"
+            // bat "git push -u origin main" 
             dir("${env.WORKSPACE}/wixMSI") {
                 bat "git add ."
                 bat 'git commit -m "New MSI build push"'
