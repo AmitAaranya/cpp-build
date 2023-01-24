@@ -36,13 +36,17 @@ pipeline {
                 bat 'git commit -m "New MSI build push"'
                 bat "git push --set-upstream origin${BUILD_NUMBER} master"
                 bat "git remote rm origin${BUILD_NUMBER}"
-
             }
+      }
+    }
+}
+post {
+        always {
+            echo "Clearing the workspace"
             deleteDir()
             dir("${workspace}@tmp") {
                 deleteDir()
             }
-      }
-    }
+        }
   }
 }
