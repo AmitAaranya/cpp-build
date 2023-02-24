@@ -30,6 +30,12 @@ pipeline {
             bat 'docker run msbuild'
           }
         }
+        
+        stage('Wix2') {
+          steps {
+            sleep 5
+          }
+        }
 
       }
     }
@@ -43,6 +49,11 @@ pipeline {
         }
 
         stage('Wix2') {
+          steps {
+            sleep 5
+          }
+        }
+        stage('Wix3') {
           steps {
             sleep 5
           }
