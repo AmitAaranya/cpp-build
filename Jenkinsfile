@@ -17,7 +17,7 @@ pipeline {
 
         stage('MSBuild-2') {
           steps {
-            bat 'docker run msbuild'
+            bat 'docker run -rm msbuild'
           }
         }
 
