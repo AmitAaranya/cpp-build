@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('MSBuild-1') {
           steps {
-            bat "docker run -v ${WORKSPACE}:C:\\app msbuild msbuild c:\\app\\Demowix\\Demowix.vcxproj"
+            bat "docker run --rm-v ${WORKSPACE}:C:\\app msbuild msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
