@@ -17,7 +17,7 @@ pipeline {
       }
     }
 
-    stage('MSBuild') {
+    stage('Build Stage') {
       parallel {
         stage('MSBuild1') {
           steps {
@@ -30,7 +30,7 @@ pipeline {
             bat 'docker run msbuild'
           }
         }
-        
+
         stage('MSBuild3') {
           steps {
             sleep 5
@@ -44,7 +44,7 @@ pipeline {
       parallel {
         stage('WixBuild') {
           steps {
-            bat "powershell -command ls"
+            bat 'powershell -command ls'
           }
         }
 
@@ -53,6 +53,7 @@ pipeline {
             sleep 5
           }
         }
+
         stage('Wix3') {
           steps {
             sleep 5
