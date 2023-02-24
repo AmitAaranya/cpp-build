@@ -35,8 +35,19 @@ pipeline {
     }
 
     stage('WixBuild') {
-      steps {
-        bat "docker run -v ${WORKSPACE}:C:\\app demowixc wix build -o C:\\app\\wixMSI\\bin\\Release\\Demowix${BUILD_NUMBER}.msi C:\\app\\wixMSI\\Product.wxs"
+      parallel {
+        stage('WixBuild') {
+          steps {
+            bat "docker run -v ${WORKSPACE}:C:\\app demowixc wix build -o C:\\app\\wixMSI\\bin\\Release\\Demowix${BUILD_NUMBER}.msi C:\\app\\wixMSI\\Product.wxs"
+          }
+        }
+
+        stage('Wix2') {
+          steps {
+            sleep 5
+          }
+        }
+
       }
     }
 
