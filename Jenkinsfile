@@ -31,7 +31,7 @@ pipeline {
           }
         }
         
-        stage('Wix2') {
+        stage('MSBuild3') {
           steps {
             sleep 5
           }
