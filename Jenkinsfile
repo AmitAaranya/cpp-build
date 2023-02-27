@@ -38,37 +38,37 @@ pipeline {
           }
         }
 
-        stage('toolkit-1-3') {
+        stage('toolkit-3') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('toolkit-1-4') {
+        stage('toolkit-4') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('toolkit-1-5') {
+        stage('toolkit-5') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('toolkit-1-6') {
+        stage('toolkit-6') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('toolkit-1-7') {
+        stage('toolkit-7') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj"
           }
         }
 
-        stage('toolkit-1-8') {
+        stage('toolkit-8') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj"
           }
