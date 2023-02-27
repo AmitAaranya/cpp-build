@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('toolkit-1') {
           steps {
-            git(branch: 'main', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
+            git(branch: 'parallel-Build', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
           }
         }
 
