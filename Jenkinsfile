@@ -28,13 +28,13 @@ pipeline {
       parallel {
         stage('toolkit-1') {
           steps {
-            bat "docker run --rm -v ${WORKSPACE}:C:\\app msbuild msbuild c:\\app\\Demowix\\Demowix.vcxproj"
+            bat "docker run --rm -v ${WORKSPACE}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-2') {
           steps {
-            bat 'docker run -rm msbuild'
+            bat 'docker run -rm msbuildtool'
           }
         }
 
