@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('github-pull') {
       parallel {
-        stage('toolkit-1') {
+        stage('Source-code') {
           steps {
-            git(branch: 'main', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
+            git(branch: 'parallelBuild', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
           }
         }
       }
