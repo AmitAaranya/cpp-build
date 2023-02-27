@@ -9,49 +9,49 @@ pipeline {
 
     stage('Build Stage') {
       parallel {
-        stage('MSBuild-1') {
+        stage('toolkit-1') {
           steps {
             bat "docker run --rm -v ${WORKSPACE}:C:\\app msbuild msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('MSBuild-2') {
+        stage('toolkit-1-2') {
           steps {
             bat 'docker run -rm msbuild'
           }
         }
 
-        stage('MSBuild-3') {
+        stage('toolkit-1-3') {
           steps {
             sleep 5
           }
         }
 
-        stage('MSBuild-4') {
+        stage('toolkit-1-4') {
           steps {
             echo 'Build for forth Independent Parts'
           }
         }
 
-        stage('MSBuild-5') {
+        stage('toolkit-1-5') {
           steps {
             echo 'Build for Fifth Independent Parts'
           }
         }
 
-        stage('MSBuild-6') {
+        stage('toolkit-1-6') {
           steps {
             echo 'Build for Sixth Independent Parts'
           }
         }
 
-        stage('MSBuild-7') {
+        stage('toolkit-1-7') {
           steps {
             echo 'Seventh Stage'
           }
         }
 
-        stage('MSBuild-8') {
+        stage('toolkit-1-8') {
           steps {
             echo '8th Build'
           }
