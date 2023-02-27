@@ -1,7 +1,0 @@
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\wixMSI.msi
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\wixMSI.wixpdb
-obj\Release\Product.wixobj
-obj\Release\wixMSI.wixproj.BindContentsFileListnull.txt
-obj\Release\wixMSI.wixproj.BindOutputsFileListnull.txt
-obj\Release\wixMSI.wixproj.BindBuiltOutputsFileListnull.txt
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\cab1.cab

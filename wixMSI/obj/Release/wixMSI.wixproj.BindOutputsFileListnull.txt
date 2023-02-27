@@ -1,3 +1,0 @@
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\cab1.cab
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\wixMSI.msi
-C:\Users\amit\Desktop\CPP\DemoWix\wixMSI\bin\Release\wixMSI.wixpdb
