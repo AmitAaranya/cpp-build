@@ -78,15 +78,5 @@ pipeline {
     }
 
   }
-  post {
-    always {
-      echo 'Clearing the workspace'
-      deleteDir()
-      dir("${workspace}@tmp") {
-        deleteDir()
-      }
-
-    }
-
-  }
+  
 }
