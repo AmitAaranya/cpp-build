@@ -2,8 +2,25 @@ pipeline {
   agent any
   stages {
     stage('github-pull') {
-      steps {
-        git(branch: 'main', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
+      parallel {
+        stage('toolkit-1') {
+          steps {
+            git(branch: 'main', credentialsId: 'a3e14212-7f76-4abe-98bd-3d0af0423756', url: 'https://github.com/AmitAaranya/CPP.git')
+          }
+        }
+
+        stage('toolkit-2') {
+          steps {
+            echo 'pull'
+          }
+        }
+
+        stage('toolkit-3') {
+          steps {
+            sleep 2
+          }
+        }
+
       }
     }
 
