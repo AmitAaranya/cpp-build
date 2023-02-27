@@ -34,7 +34,7 @@ pipeline {
 
         stage('toolkit-1-2') {
           steps {
-            bat 'docker run -rm msbuildtool'
+            bat 'docker run --rm msbuildtool'
           }
         }
 
@@ -78,5 +78,4 @@ pipeline {
     }
 
   }
-  
 }
