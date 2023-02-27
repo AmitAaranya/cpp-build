@@ -28,49 +28,49 @@ pipeline {
       parallel {
         stage('toolkit-1') {
           steps {
-            bat "docker run --rm -v ${WORKSPACE}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
-        stage('toolkit-1-2') {
+        stage('toolkit-2') {
           steps {
-            bat 'docker run --rm msbuildtool'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-3') {
           steps {
-            sleep 5
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-4') {
           steps {
-            echo 'Build for forth Independent Parts'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-5') {
           steps {
-            echo 'Build for Fifth Independent Parts'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-6') {
           steps {
-            echo 'Build for Sixth Independent Parts'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\Demowix\\Demowix.vcxproj"
           }
         }
 
         stage('toolkit-1-7') {
           steps {
-            echo 'Seventh Stage'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj"
           }
         }
 
         stage('toolkit-1-8') {
           steps {
-            echo '8th Build'
+            bat "docker run --rm -v ${WORKSPACE}\\${STAGE_NAME}:C:\\app msbuildtool msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj"
           }
         }
 
