@@ -1,13 +1,15 @@
 pipeline {
   agent {
-        docker { 
-          image 'test5' 
-          }
+      docker { 
+        image 'test5' 
+        reuseNode 'true'
+        }
     }
   stages {
     stage('docker-build') {
         parallel {
           stage('MSBuild1') {
+            
             steps {
               bat "msbuild"
             }
@@ -19,11 +21,7 @@ pipeline {
             }
           }
 
-          stage('MSBuild3') {
-            steps {
-              bat 'msbuild'
-            }
-          }
+
 
       }
     }
