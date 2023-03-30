@@ -28,7 +28,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -41,7 +41,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -54,7 +54,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -67,7 +67,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -81,7 +81,7 @@ pipeline {
                     }
                     
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -94,7 +94,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\Demowix\\Demowix.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -107,7 +107,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\SimpleRnD\\SimpleRnD.vcxproj /property:Configuration=Release /property:Platform=x64 /m"
                     }
                 }
 
@@ -120,7 +120,7 @@ pipeline {
                         }
                     }
                     steps {
-                        bat "msbuild c:\\app\\TeradyneDemo\\TeradyneDemo.vcxproj /property:Configuration=Release /property:Platform=x64"
+                        bat "msbuild c:\\app\\TeradyneDemo.sln /property:Configuration=Release /property:Platform=x64"
                     }
                 }
 
@@ -181,7 +181,7 @@ pipeline {
                 stage('toolkit-8') {
                     steps {
                         bat "mkdir C:\\output\\${BUILD_NUMBER}_${BUILD_TIMESTAMP}\\${STAGE_NAME}"
-                        bat "move ${WORKSPACE}\\${STAGE_NAME}\\TeradyneDemo\\x64\\Release\\*.* C:\\output\\${BUILD_NUMBER}_${BUILD_TIMESTAMP}\\${STAGE_NAME}"
+                        bat "move ${WORKSPACE}\\${STAGE_NAME}\\x64\\Release\\*.* C:\\output\\${BUILD_NUMBER}_${BUILD_TIMESTAMP}\\${STAGE_NAME}"
                     }
                 }
 
